@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<header>
+	<head>
 		<!-- Text displayed on the tab -->
 		<title>Sean Duffie | Personal Webpage</title>
-		<!-- To Do -->
-		<style></style>
 		<!-- Default for all links of the page -->
 		<base href="./index.html">
 		<!-- Link to styles  -->
+		<link href="./style.css" type="text/css" rel="stylesheet">
+		<!-- Webpage title bar icon -->
 		<link rel="icon" href="./SMD 20-0310 019 b.jpg" type="image/x-icon">
 		<!-- Metadata -->
 		<meta charset="UTF-8">
@@ -16,130 +16,115 @@
 		<meta name="author" content="Sean Duffie">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--<meta http-equiv="refresh" content="30">-->
-	</header>
+	</head>
 
 	<body>
-		<nav id="Top">
-			<ul>
-				<li><a href="#About">About Me</a></li>
-				<li><a href="#Experience">Experience</a></li>
-				<li><a href="#Portfolio">Portfolio</a></li>
-				<li><a href="#Blog">Blog</a></li>
-				<li><a href="#Contact">Contact</a></li>
-			</ul>
+		<nav id="Top" class="Top"  name="Top">
+			<a href="#About">About Me</a>
+			<a href="#Experience">Experience</a>
+			<a href="#Portfolio">Portfolio</a>
+			<a href="#Blog">Blog</a>
+			<a href="#Contact">Contact</a>
 		</nav>
 
-		<header id="Header">
+		<header id="Header" class="Header" name="Header">
 			<h1>Sean M. Duffie (Work in Progress)</h1>
 			<h3>*This Website is currently under construction as I teach myself about HTML*</h3>
+			<figure>
+				<img src="./SMD 20-0310 017 b.jpg" alt="Headshot of Sean Duffie" width="300" height="322" />
+				<figcaption>Headshot of Sean Duffie</figcaption>
+			</figure>
 		</header>
 
 		<main>
-			<figure>
-				<img src="./SMD 20-0310 017 b.jpg" alt="Headshot of Sean Duffie" width="300" height="322"/>
-				<figcaption></figcaption>
-			</figure>
 
+			<!-- About Me Section -->
 			<section id="About" name="About">
-				<a name="About"></a>
-				<article>
-					<a href="#Top">Back to Top</a>
-					<h2>About Me</h2>
-					<p>My name is Sean Duffie, I'm majoring in Electronic Systems at <a href="https://www.tamu.edu/" target="_blank">Texas A&M University</a> (Class of 2022), with a Computer Science minor. I'm a life long resident of Cypress, Texas. I earned the rank of Eagle Scout through a decade-long regimen that required a substantial amount of effort and commitment. My favorite memories from Scouting were the campouts, which is an activity that I still enjoy today. I competed in cross country (track) and on my community’s swim team while attending junior high and high school. I still enjoy long-distance running and swimming, although I no longer pursue either activity competitively. I enjoy reading, playing games, and spending time outside in my free time. Much of my teen-years involved interacting with computers, but I didn't take my first computer science course until my senior year in high school. That class was initially difficult for me, but it wasn't long before I realized that I had found my passion. My first exposure to programming was learning Java, but I’ve since added Python, C++, HTML, and others to my knowledge-base.</p>
-				</article>
+				<h2 class="Heading">About Me</h2>
+				<p class="Top"><a href="#Top">Back to Top</a></p>
+				<p>My name is Sean Duffie, I'm majoring in Electronic Systems at <a href="https://www.tamu.edu/" target="_blank">Texas A&M University</a> (Class of 2022), with a Computer Science minor. I'm a life long resident of Cypress, Texas. I earned the rank of Eagle Scout through a decade-long regimen that required a substantial amount of effort and commitment. My favorite memories from Scouting were the campouts, which is an activity that I still enjoy today. I competed in cross country (track) and on my community’s swim team while attending junior high and high school. I still enjoy long-distance running and swimming, although I no longer pursue either activity competitively. I enjoy reading, playing games, and spending time outside in my free time. Much of my teen-years involved interacting with computers, but I didn't take my first computer science course until my senior year in high school. That class was initially difficult for me, but it wasn't long before I realized that I had found my passion. My first exposure to programming was learning Java, but I’ve since added Python, C++, HTML, and others to my knowledge-base.</p>
 			</section>
 
-			<section id="Experience" name="Experience">
-				<article>
-					<a href="#Top">Back to Top</a>
-					<h2>Experience</h2>
-					<h3>Find a link to my resume below:</h3>
-					<a href="Duffie, Sean ~ Functional Resume 2020.pdf" target="_blank">Resume</a>
-					<h3>Skills:</h3>
-					<h4></h4>
-					<ul>
-						<li>Test 1</li>
-						<li>Test 2</li>
-						<li>Test 3</li>
-					</ul>
-					<h4></h4>
-					<ul>
-						<li>Test 1</li>
-						<li>Test 2</li>
-						<li>Test 3</li>
-					</ul>
-					<h3>Certifications:</h3>
-					<ul>
-						<li>Test 1</li>
-						<li>Test 2</li>
-						<li>Test 3</li>
-					</ul>
-					<h3>Past Work:</h3>
-					<ul>
-						<li>Test 1</li>
-						<li>Test 2</li>
-						<li>Test 3</li>
-					</ul>
-				</article>
+			<!-- Experience Section -->
+			<section id="Experience" class="Experience" name="Experience">
+				<h2 class="Heading">Experience</h2>
+				<p class="Top"><a href="#Top" class="Top">Back to Top</a></p>
+				<h3 class="subHeading">Find a link to my resume below:</h3>
+				<a href="Duffie, Sean ~ Functional Resume 2020.pdf" target="_blank">Resume</a>
+				<h3 class="subHeading">Skills:</h3>
+				<h4></h4>
+				<ul>
+					<li>Using Microcontrollers such as Arduinos for hardware-based projects.</li>
+					<li>Programming </li>
+					<li>Test 3</li>
+				</ul>
+				<h4></h4>
+				<ul>
+					<li>Test 1</li>
+					<li>Test 2</li>
+					<li>Test 3</li>
+				</ul>
+				<!--<h3>Certifications:</h3>
+				<ul>
+					<li>Test 1</li>
+					<li>Test 2</li>
+					<li>Test 3</li>
+				</ul> -->
+				<!--<h3>Past Work:</h3>
+				<ul>
+					<li>Test 1</li>
+					<li>Test 2</li>
+					<li>Test 3</li>
+				</ul>-->
 			</section>
 
-			<section id="Portfolio">
-				<a name="Portfolio"></a>
-				<article>
-					<a href="#Top">Back to Top</a>
-					<h2>Portfolio</h2>
-					<h3>Past Projects:</h3>
-					<ul>
-						<li>Test 1</li>
-						<li>Test 2</li>
-						<li>Test 3</li>
-					</ul>
-					<h3>Current Projects:</h3>
-					<ul>
-						<li>Test 1</li>
-						<li>Test 2</li>
-						<li>Test 3</li>
-					</ul>
-					<h3>Future Projects:</h3>
-					<ul>
-						<li>Test 1</li>
-						<li>Test 2</li>
-						<li>Test 3</li>
-					</ul>
-				</article>
+			<!-- Portfolio Section -->
+			<section id="Portfolio" class="Portfolio" name="Portfolio">
+				<h2 class="Heading">Portfolio</h2>
+				<p class="Top"><a href="#Top">Back to Top</a></p>
+				<h3 class="subHeading">Past Projects:</h3>
+				<ul>
+					<li>ESP8266 programming board</li>
+					<li>Smart Coffee Maker</li>
+				</ul>
+				<h3 class="subHeading">Current Projects:</h3>
+				<ul>
+					<li>Personal Website</li>
+				</ul>
+				<h3 class="subHeading">Future Projects:</h3>
+				<ul>
+					<li>Rubik's Cube Solver</li>
+					<li>Grade Tracker</li>
+					<li>Plant Hydroponics using Raspberry Pi</li>
+				</ul>
 			</section>
 
-			<section id="Blog">
-				<a name="Blog"></a>
-				<article>
-					<a href="#Top">Back to Top</a>
-					<h2>Blog</h2>
-					<p>To Do</p>
-				</article>
+			<section id="Blog" class="Blog" name="Blog">
+				<h2 class="Heading">Blog</h2>
+				<p class="Top"><a href="#Top">Back to Top</a></p>
+				<p>To Do</p>
 			</section>
 		</main>
 
 		<footer>
-			<section id="Contact">
-				<article>
-					<a href="#Top">Back to Top</a>
-					<h2>Contact</h2>
-					<p>If you want to reach me, feel free to contact me through any of the following platforms:</p>
-					<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-					<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="sean-duffie-a60509171"><a class="LI-simple-link" href='https://www.linkedin.com/in/sean-duffie-a60509171?trk=profile-badge'>Sean Duffie</a></div>
-					<span class="right">
-						<a href="https://www.linkedin.com/in/sean-duffie-a60509171/" target="_blank">
-							<img src="Linkedin-Icon.png" alt="Link to my LinkedIn page" width="50" height="50">
-						</a>
-						<a href="https://github.com/SeanDuffie" target="_blank">
-							<img src="GitHub-Mark.png" alt="Link to my GitHub page" width="50" height="50">
-						</a>
-						<a href="mailto:sean.duffie@tamu.edu" target="_blank">
-							<img src="Gmail-icon.png" alt="Link to my Email" width="50" height="50">
-						</a>
-					</span>
-					<p><em>@2020 Sean Duffie</em></p>
-				</article>
+			<section id="Contact" class="Contact" name="Contact">
+				<h2 class="Heading">Contact</h2>
+				<p class="Top"><a href="#Top">Back to Top</a></p>
+				<p>If you want to reach me, feel free to contact me through any of the following platforms:</p>
+				<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+				<!--<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="sean-duffie-a60509171"><a class="LI-simple-link" href='https://www.linkedin.com/in/sean-duffie-a60509171?trk=profile-badge'>Sean Duffie</a></div>-->
+				<span id="Footing" class="Footing" name="Footing">
+					<a href="https://www.linkedin.com/in/sean-duffie-a60509171/" target="_blank">
+						<img src="Linkedin-Icon.png" alt="Link to my LinkedIn page" width="50" height="50">
+					</a>
+					<a href="https://github.com/SeanDuffie" target="_blank">
+						<img src="GitHub-Mark.png" alt="Link to my GitHub page" width="50" height="50">
+					</a>
+					<a href="mailto:sean.duffie@tamu.edu" target="_blank">
+						<img src="Gmail-icon.png" alt="Link to my Email" width="50" height="50">
+					</a>
+				</span>
+				<p><em>@2020 Sean Duffie</em></p>
 			</section>
 		</footer>
 	</body>
