@@ -1,9 +1,17 @@
-.Top {
-	font-size: 14px;
+.nav {
+	font-size: 12px;
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
 	color: black;
+}
+
+.title {
+	font-size: 30px;
+	font-style: oblique;
+	font-family: 'Courier New';
+	text-align: center;
+	color: grey;
 }
 
 .Header {
@@ -72,6 +80,22 @@
 	font-size: 14px;
 	font-style: normal;
 	font-family: Arial;
+	text-align: center;
+	color: black;
+}
+
+.return {
+	font-size: 14px;
+	font-style: normal;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	color: grey;
+}
+
+#Headshot {
+	font-size: 12px;
+	font-style: italic;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-align: center;
 	color: black;
 }
