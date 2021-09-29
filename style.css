@@ -1,9 +1,31 @@
 .nav {
-	font-size: 12px;
+	font-size: 24px;
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
-	color: black;
+
+	color: white;
+	background-attachment: fixed;
+}
+
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #dddddd;
+}
+
+.nav li {
+	float: left;
+}
+
+.nav a {
+	display: block;
+	color: maroon;
+	text-align: center;
+	padding: 14px 28px;
+	text-decoration: wavy;
 }
 
 .title {
@@ -14,26 +36,31 @@
 	color: grey;
 }
 
+.bg {
+	background-image: url("./images/Pine_Stain-VintageBurgundy.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+
+}
 .Header {
 	font-size: 14px;
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
-	color: black;
 }
 
 .About {
 	font-size: 14px;
 	font-style: normal;
 	font-family: Arial;
-	color: black;
 }
 
 .Experience {
 	font-size: 14px;
 	font-style: normal;
 	font-family: Arial;
-	color: black;
 }
 
 .Portfolio {
@@ -41,7 +68,6 @@
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
-	color: black;
 }
 
 .Blog {
@@ -49,7 +75,6 @@
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
-	color: black;
 }
 
 .Contact {
@@ -57,7 +82,6 @@
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
-	color: black;
 }
 
 .Heading {
@@ -65,7 +89,6 @@
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
-	color: black;
 }
 
 .subHeading {
@@ -73,7 +96,6 @@
 	font-style: normal;
 	font-family: Arial;
 	text-align: left;
-	color: black;
 }
 
 .Footing {
@@ -81,7 +103,6 @@
 	font-style: normal;
 	font-family: Arial;
 	text-align: center;
-	color: black;
 }
 
 .return {
@@ -97,5 +118,4 @@
 	font-style: italic;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-align: center;
-	color: black;
 }
