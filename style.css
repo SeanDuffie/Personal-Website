@@ -1,12 +1,24 @@
+/* spacing on all sections */
+.section {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+.section:last-of-type {
+    padding-bottom: 4rem;
+}
+
 /* hero background image */
 .bgimage {
     height:100vh;
     background: url('images\\rm187-tang-84.jpg');
     background-size:cover;
     position:relative;
+    padding: 0;
+    margin: 0;
 }
 /* text css above hero image*/
 .intro_title {
+    padding-top: 10rem;
     font-size: 4.5rem;
 }
 .intro_desc {
@@ -21,31 +33,14 @@
     color: white;
 }
 
-/* TODO */
-.nav-item {
-    -webkit-text-fill-color: white;
-}
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
     background-color: black;
 }
 
-/* FIXME */
-.active {
-    -webkit-text-fill-color: red;
-}
-
 /* about section image css */
 .imageAboutPage {
     width: 100%;
-}
-
-.title {
-	font-size: 30px;
-	font-style: oblique;
-	font-family: 'Courier New';
-	text-align: center;
-	color: grey;
 }
 
 .bg {
@@ -122,11 +117,4 @@
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 	color: grey;
-}
-
-#Headshot {
-	font-size: 12px;
-	font-style: italic;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	text-align: center;
 }
