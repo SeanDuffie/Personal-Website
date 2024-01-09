@@ -9,12 +9,14 @@
 
 /* hero background image */
 .bgimage {
-    height:100vh;
-    background: url('images\\rm187-tang-84.jpg');
+    width: 100vw;
+    height: 100vh;
+    background: url('images/23-0512 SMD~TAMU GradPix 035 b.jpg');
     background-size:cover;
     position:relative;
     padding: 0;
     margin: 0;
+    resize:vertical;
 }
 /* text css above hero image*/
 .intro_title {
