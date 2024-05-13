@@ -11,6 +11,56 @@ window.onscroll = function() {
     }
 }
 
+function education() {
+    return [
+        {
+        name: "Childhood and Education",
+        start: "1971/06/28",
+        end: "1995/09/01"
+        },
+        {
+        name: "Entrepreneur Journey",
+        start: "1983/06/28",
+        end: "2002/03/13"
+        },
+        {
+        name: "Making of Tycoon",
+        start: "2002/03/14",
+        end: "2010/06/28"
+        },
+        {
+        name: "Rise of Tycoon",
+        start: "2010/06/29",
+        end: "2030/01/01"
+        }
+    ];
+}
+
+function careers() {
+    return [
+        {
+        name: "Childhood and Education",
+        start: "1971/06/28",
+        end: "1995/09/01"
+        },
+        {
+        name: "Entrepreneur Journey",
+        start: "1983/06/28",
+        end: "2002/03/13"
+        },
+        {
+        name: "Making of Tycoon",
+        start: "2002/03/14",
+        end: "2010/06/28"
+        },
+        {
+        name: "Rise of Tycoon",
+        start: "2010/06/29",
+        end: "2030/01/01"
+        }
+    ];
+}
+
 // Co = [{
 //     from: "June 2023",
 //     to: null,
