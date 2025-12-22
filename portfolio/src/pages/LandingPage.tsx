@@ -8,17 +8,8 @@ interface LandingPageProps {
 }
 
 export function LandingPage({ onNavigate }: LandingPageProps) {
-  const [scrollY, setScrollY] = React.useState(0);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  /** TODO: Enter my actual projects here */
   const featuredProjects = [
     {
       id: 1,
@@ -46,23 +37,41 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1728631191055-aa24c9eff7f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDF8fHx8MTc2NTg1MTg0MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src="/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg"
             alt="Hero background"
             className="w-full h-full object-cover"
             style={{
-              transform: `translateY(${Math.min(scrollY * 0.5, window.innerHeight * 0.9)}px)`,
-              transition: 'transform 0.1s ease-out',
+              transform: `translateY(${Math.min(scrollY, window.innerHeight)}px)`,
+            //   transition: 'transform 0.1s ease-out',
+              scrollBehavior: 'smooth',
             }}
+            // loading='lazy'
           />
+
+        {/* <img
+            src="/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg"
+            alt="Hero background"
+            // 'sticky' keeps it pinned. 'top-0' sets the pin position.
+            // className="sticky top-0 w-full h-screen object-cover -z-10"
+            className="
+                fixed top-0 left-0
+                h-fit w-fit
+                object-contain
+                -z-10
+            "
+        /> */}
+
+          {/** Sets the gradient overlay over the hero image */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-white" />
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-white mb-4">
-            Hi, I'm John Doe
+            Howdy, I'm Sean Duffie!
           </h1>
           <p className="text-xl text-white/90 mb-8">
-            Full-Stack Developer & UI/UX Enthusiast
+            Embedded Software Engineer with a passion for optimization and innovation.<br/>
+            Let's build something amazing together.
           </p>
           <div className="flex gap-3 justify-center">
             <Button size="lg" onClick={() => onNavigate('projects')}>
@@ -97,7 +106,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Card className="p-6 text-center">
-                <div className="text-3xl mb-2">5+</div>
+                <div className="text-3xl mb-2">4+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </Card>
               <Card className="p-6 text-center">
@@ -172,10 +181,12 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               Email
             </Button>
             <Button variant="outline" size="lg" className="gap-2">
+              {/* FIXME: Swap from Lucid-icons to simpleicons */}
               <Linkedin className="w-5 h-5" />
               LinkedIn
             </Button>
             <Button variant="outline" size="lg" className="gap-2">
+              {/* FIXME: Swap from Lucid-icons to simpleicons */}
               <Github className="w-5 h-5" />
               GitHub
             </Button>
