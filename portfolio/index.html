@@ -1,5 +1,21 @@
 <!doctype html>
 <html lang="en">
+  <script>
+    (function() {
+      // Check local storage
+      const savedTheme = localStorage.getItem('theme');
+
+      // Check system preference
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      // Determine if we should add the class
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/img/Hawaii Icon 1.webp" loading="lazy" />

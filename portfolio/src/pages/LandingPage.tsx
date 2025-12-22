@@ -88,7 +88,6 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
 
       {/* About Section */}
       <section className="py-20 px-4">
-        {/* bg-white dark:bg-gray-800 transition-colors duration-200"> */}
         <div className="max-w-4xl mx-auto">
           <h2 className="mb-8 text-center dark:text-white">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">

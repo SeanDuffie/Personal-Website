@@ -48,7 +48,6 @@ export function SchedulePage() {
 
   return (
     <div className="min-h-screen py-24 px-4">
-        {/* bg-white dark:bg-gray-900 transition-colors duration-200"> */}
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 text-center">
           <h1 className="mb-4 dark:text-white">Schedule a Meeting</h1>
