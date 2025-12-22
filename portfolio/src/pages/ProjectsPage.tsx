@@ -128,11 +128,12 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
   });
 
   return (
-    <div className="min-h-screen py-24 px-4 bg-gray-50">
+    <div className="min-h-screen py-24 px-4">
+        {/* bg-white dark:bg-gray-900 transition-colors duration-200"> */}
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 text-center">
-          <h1 className="mb-4">Projects</h1>
-          <p className="text-gray-600">
+          <h1 className="mb-4 dark:text-white">Projects</h1>
+          <p className="text-gray-600 dark:text-gray-400">
             A collection of my work spanning web applications, mobile apps, and open-source contributions
           </p>
         </div>
@@ -153,7 +154,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
           </div>
           
           <div className="flex items-center gap-2 overflow-x-auto pb-2">
-            <Filter className="w-4 h-4 text-gray-500 flex-shrink-0" />
+            <Filter className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
             {categories.map((category) => (
               <Button
                 key={category}
@@ -173,10 +174,10 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
           {filteredProjects.map((project) => (
             <Card 
               key={project.id} 
-              className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+              className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer dark:bg-gray-800 dark:border-gray-700"
               onClick={() => onProjectClick(project.id)}
             >
-              <div className="aspect-video bg-gray-200 overflow-hidden">
+              <div className="aspect-video bg-gray-200 dark:bg-gray-700 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -186,11 +187,11 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
               
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="flex-1">{project.title}</h3>
-                  <span className="text-xs text-gray-500 ml-2">{project.year}</span>
+                  <h3 className="flex-1 dark:text-white">{project.title}</h3>
+                  <span className="text-xs text-gray-500 dark:text-gray-400 ml-2">{project.year}</span>
                 </div>
                 
-                <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                   {project.description}
                 </p>
                 

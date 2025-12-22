@@ -39,30 +39,31 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
           <img
             src="/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg"
             alt="Hero background"
-            className="w-full h-full object-cover"
+            className="w-fit h-fit object-contain"
             style={{
-              transform: `translateY(${Math.min(scrollY, window.innerHeight)}px)`,
+              transform: `translateY(${Math.min(scrollY*0.5, window.innerHeight*0.9)}px)`,
             //   transition: 'transform 0.1s ease-out',
               scrollBehavior: 'smooth',
             }}
             // loading='lazy'
           />
 
-        {/* <img
-            src="/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg"
-            alt="Hero background"
-            // 'sticky' keeps it pinned. 'top-0' sets the pin position.
-            // className="sticky top-0 w-full h-screen object-cover -z-10"
-            className="
-                fixed top-0 left-0
-                h-fit w-fit
-                object-contain
-                -z-10
-            "
-        /> */}
+            {/* <img
+                src="/img/23-05-12_SMD_TAMU_GradPix_035_b.jpg"
+                alt="Hero background"
+                // 'sticky' keeps it pinned. 'top-0' sets the pin position.
+                // className="sticky top-0 w-full h-screen object-cover -z-10"
+                className="
+                    fixed top-0 left-0
+                    h-fit w-fit
+                    object-contain
+                    -z-10
+                "
+            /> */}
 
           {/** Sets the gradient overlay over the hero image */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-white" />
+          <div className="absolute inset-0"/>
+           {/* bg-gradient-to-b from-black/60 via-black/40 to-white" /> */}
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -86,40 +87,41 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4">
+        {/* bg-white dark:bg-gray-800 transition-colors duration-200"> */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="mb-8 text-center">About Me</h2>
+          <h2 className="mb-8 text-center dark:text-white">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p className="mb-4">
+              <p className="mb-4 dark:text-gray-300">
                 I'm a passionate full-stack developer with 5+ years of experience building web applications. 
                 I specialize in creating scalable, user-friendly solutions using modern technologies.
               </p>
-              <p className="mb-4">
+              <p className="mb-4 dark:text-gray-300">
                 My expertise lies in React, Next.js, TypeScript, and Node.js. I'm constantly learning 
                 and staying up-to-date with the latest trends in web development.
               </p>
-              <p>
+              <p className="dark:text-gray-300">
                 When I'm not coding, you can find me contributing to open-source projects, writing 
                 technical blog posts, or exploring new technologies.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Card className="p-6 text-center">
-                <div className="text-3xl mb-2">4+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+              <Card className="p-6 text-center dark:bg-gray-700 dark:border-gray-600">
+                <div className="text-3xl mb-2 dark:text-white">4+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Years Experience</div>
               </Card>
-              <Card className="p-6 text-center">
-                <div className="text-3xl mb-2">50+</div>
-                <div className="text-sm text-gray-600">Projects Completed</div>
+              <Card className="p-6 text-center dark:bg-gray-700 dark:border-gray-600">
+                <div className="text-3xl mb-2 dark:text-white">50+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Projects Completed</div>
               </Card>
-              <Card className="p-6 text-center">
-                <div className="text-3xl mb-2">10+</div>
-                <div className="text-sm text-gray-600">Happy Clients</div>
+              <Card className="p-6 text-center dark:bg-gray-700 dark:border-gray-600">
+                <div className="text-3xl mb-2 dark:text-white">10+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Happy Clients</div>
               </Card>
-              <Card className="p-6 text-center">
-                <div className="text-3xl mb-2">3</div>
-                <div className="text-sm text-gray-600">Certifications</div>
+              <Card className="p-6 text-center dark:bg-gray-700 dark:border-gray-600">
+                <div className="text-3xl mb-2 dark:text-white">3</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Certifications</div>
               </Card>
             </div>
           </div>
@@ -127,28 +129,28 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Featured Projects</h2>
-            <p className="text-gray-600">
+            <h2 className="mb-4 dark:text-white">Featured Projects</h2>
+            <p className="text-gray-600 dark:text-gray-400">
               Here are some of my recent works that showcase my skills and experience
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {featuredProjects.map((project) => (
-              <Card key={project.id} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={project.id} className="p-6 hover:shadow-lg transition-shadow bg-gray-100 dark:bg-gray-800 dark:border-gray-700">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
                   <ExternalLink className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="mb-2">{project.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">{project.description}</p>
+                <h3 className="mb-2 dark:text-white">{project.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 bg-gray-100 rounded text-xs"
+                      className="px-2 py-1 bg-gray-100 bg-white dark:bg-gray-700 dark:text-gray-300 rounded text-xs"
                     >
                       {tag}
                     </span>
@@ -168,10 +170,10 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-white dark:bg-gray-800 transition-colors duration-200">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="mb-4">Let's Connect</h2>
-          <p className="text-gray-600 mb-8">
+          <h2 className="mb-4 dark:text-white">Let's Connect</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">
             Feel free to reach out for collaborations or just a friendly hello
           </p>
           
@@ -181,12 +183,10 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               Email
             </Button>
             <Button variant="outline" size="lg" className="gap-2">
-              {/* FIXME: Swap from Lucid-icons to simpleicons */}
               <Linkedin className="w-5 h-5" />
               LinkedIn
             </Button>
             <Button variant="outline" size="lg" className="gap-2">
-              {/* FIXME: Swap from Lucid-icons to simpleicons */}
               <Github className="w-5 h-5" />
               GitHub
             </Button>

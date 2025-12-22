@@ -47,11 +47,12 @@ export function SchedulePage() {
   };
 
   return (
-    <div className="min-h-screen py-24 px-4 bg-gray-50">
+    <div className="min-h-screen py-24 px-4">
+        {/* bg-white dark:bg-gray-900 transition-colors duration-200"> */}
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 text-center">
-          <h1 className="mb-4">Schedule a Meeting</h1>
-          <p className="text-gray-600">
+          <h1 className="mb-4 dark:text-white">Schedule a Meeting</h1>
+          <p className="text-gray-600 dark:text-gray-400">
             Choose a time that works best for you, and let's discuss your project
           </p>
         </div>
@@ -59,8 +60,8 @@ export function SchedulePage() {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Calendar Section */}
           <div>
-            <Card className="p-6 mb-6">
-              <h3 className="mb-4 flex items-center gap-2">
+            <Card className="p-6 mb-6 dark:bg-gray-800 dark:border-gray-700">
+              <h3 className="mb-4 flex items-center gap-2 dark:text-white">
                 <CalendarIcon className="w-5 h-5" />
                 Select a Date
               </h3>
@@ -75,8 +76,8 @@ export function SchedulePage() {
               </div>
             </Card>
 
-            <Card className="p-6">
-              <h3 className="mb-4 flex items-center gap-2">
+            <Card className="p-6 dark:bg-gray-800 dark:border-gray-700">
+              <h3 className="mb-4 flex items-center gap-2 dark:text-white">
                 <Clock className="w-5 h-5" />
                 Available Time Slots
               </h3>
@@ -98,8 +99,8 @@ export function SchedulePage() {
 
           {/* Form Section */}
           <div>
-            <Card className="p-6">
-              <h3 className="mb-6">Meeting Details</h3>
+            <Card className="p-6 dark:bg-gray-800 dark:border-gray-700">
+              <h3 className="mb-6 dark:text-white">Meeting Details</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -168,12 +169,12 @@ export function SchedulePage() {
                 </div>
 
                 {selectedDate && selectedTime && meetingType && (
-                  <Card className="p-4 bg-blue-50 border-blue-200">
+                  <Card className="p-4 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
                     <div className="text-sm">
                       <div className="mb-2">
-                        <strong>Selected Schedule:</strong>
+                        <strong className="dark:text-white">Selected Schedule:</strong>
                       </div>
-                      <div className="space-y-1 text-gray-700">
+                      <div className="space-y-1 text-gray-700 dark:text-gray-300">
                         <div className="flex items-center gap-2">
                           <CalendarIcon className="w-4 h-4" />
                           {selectedDate.toLocaleDateString('en-US', {
@@ -206,10 +207,10 @@ export function SchedulePage() {
               </form>
             </Card>
 
-            <Card className="p-4 mt-4 bg-gray-50">
-              <div className="text-sm text-gray-600">
+            <Card className="p-4 mt-4 bg-white dark:bg-gray-800/50 dark:border-gray-700">
+              <div className="text-sm text-gray-600 dark:text-gray-400">
                 <div className="mb-2">
-                  <strong>Meeting Information:</strong>
+                  <strong className="dark:text-white">Meeting Information:</strong>
                 </div>
                 <ul className="space-y-1 list-disc list-inside">
                   <li>All meetings are conducted via Google Meet or Zoom</li>

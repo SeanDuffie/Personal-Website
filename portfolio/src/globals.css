@@ -54,3 +54,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* hero background image */
+.bgimage {
+    width: 100vw;
+    height: 100vh;
+    background: url('img/23-05-12_SMD_TAMU_GradPix_035_b.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Fixes the background image to the viewport */
+    position:relative;
+    padding: 0;
+    margin: 0;
+    resize:vertical;
+}
