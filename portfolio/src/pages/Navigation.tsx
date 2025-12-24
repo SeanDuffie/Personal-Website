@@ -19,15 +19,16 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-colors duration-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
+            {/* FIXME: Update the top left image to be a logo or profile picture */}
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg" />
-            <span className="font-semibold">Portfolio</span>
+            <span className="font-semibold text-foreground">Portfolio</span>
           </div>
-          
-          <div className="flex gap-1 items-center">
+
+          <div className="flex gap-1 items-center text-foreground">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (

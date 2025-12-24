@@ -7,17 +7,17 @@ export function DiagnosticTest() {
       <h1 className="text-3xl font-bold mb-8">Styling Diagnostic Test</h1>
       
       {/* Test 1: Basic Tailwind Classes */}
-      <div className="bg-blue-500 text-white p-4 rounded">
+      <div className="bg-blue-500 text-primary-foreground p-4 rounded">
         ✓ Test 1: If this is BLUE, Tailwind is working
       </div>
       
       {/* Test 2: Flex and Gap */}
       <div className="flex gap-4">
-        <div className="bg-red-500 text-white p-4 rounded flex-1">Box 1</div>
-        <div className="bg-green-500 text-white p-4 rounded flex-1">Box 2</div>
-        <div className="bg-purple-500 text-white p-4 rounded flex-1">Box 3</div>
+        <div className="bg-red-500 text-primary-foreground p-4 rounded flex-1">Box 1</div>
+        <div className="bg-green-500 text-primary-foreground p-4 rounded flex-1">Box 2</div>
+        <div className="bg-purple-500 text-primary-foreground p-4 rounded flex-1">Box 3</div>
       </div>
-      <div className="text-sm text-gray-600">
+      <div className="text-sm text-muted-foreground">
         ✓ Test 2: If these 3 boxes are side-by-side with gaps, flex is working
       </div>
       
@@ -27,7 +27,7 @@ export function DiagnosticTest() {
         <div className="bg-yellow-500 p-4 rounded">Grid 2</div>
         <div className="bg-yellow-500 p-4 rounded">Grid 3</div>
       </div>
-      <div className="text-sm text-gray-600">
+      <div className="text-sm text-muted-foreground">
         ✓ Test 3: If these are in a 3-column grid, grid is working
       </div>
       
@@ -47,16 +47,16 @@ export function DiagnosticTest() {
       
       {/* Test 7: Responsive */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="bg-indigo-500 text-white p-4 rounded">Responsive 1</div>
-        <div className="bg-indigo-500 text-white p-4 rounded">Responsive 2</div>
-        <div className="bg-indigo-500 text-white p-4 rounded">Responsive 3</div>
+        <div className="bg-indigo-500 text-primary-foreground p-4 rounded">Responsive 1</div>
+        <div className="bg-indigo-500 text-primary-foreground p-4 rounded">Responsive 2</div>
+        <div className="bg-indigo-500 text-primary-foreground p-4 rounded">Responsive 3</div>
       </div>
-      <div className="text-sm text-gray-600">
+      <div className="text-sm text-muted-foreground">
         ✓ Test 7: Resize window - should be 1 col (small), 2 cols (medium), 3 cols (large)
       </div>
       
       {/* Test 8: Hover Effects */}
-      <button className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition-colors">
+      <button className="bg-blue-600 text-primary-foreground px-6 py-3 rounded hover:bg-blue-700 transition-colors">
         ✓ Test 8: Hover over me - color should change
       </button>
       

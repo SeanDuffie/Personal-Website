@@ -50,8 +50,8 @@ export function SchedulePage() {
     <div className="min-h-screen py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 dark:text-white">Schedule a Meeting</h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <h1 className="mb-4 text-foreground">Schedule a Meeting</h1>
+          <p className="text-muted-foreground">
             Choose a time that works best for you, and let's discuss your project
           </p>
         </div>
@@ -59,8 +59,8 @@ export function SchedulePage() {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Calendar Section */}
           <div>
-            <Card className="p-6 mb-6 dark:bg-gray-800 dark:border-gray-700">
-              <h3 className="mb-4 flex items-center gap-2 dark:text-white">
+            <Card className="p-6 mb-6 bg-card dark:border-gray-700">
+              <h3 className="mb-4 flex items-center gap-2 text-foreground">
                 <CalendarIcon className="w-5 h-5" />
                 Select a Date
               </h3>
@@ -75,8 +75,8 @@ export function SchedulePage() {
               </div>
             </Card>
 
-            <Card className="p-6 dark:bg-gray-800 dark:border-gray-700">
-              <h3 className="mb-4 flex items-center gap-2 dark:text-white">
+            <Card className="p-6 bg-card dark:border-gray-700">
+              <h3 className="mb-4 flex items-center gap-2 text-foreground">
                 <Clock className="w-5 h-5" />
                 Available Time Slots
               </h3>
@@ -98,8 +98,8 @@ export function SchedulePage() {
 
           {/* Form Section */}
           <div>
-            <Card className="p-6 dark:bg-gray-800 dark:border-gray-700">
-              <h3 className="mb-6 dark:text-white">Meeting Details</h3>
+            <Card className="p-6 bg-card dark:border-gray-700">
+              <h3 className="mb-6 text-foreground">Meeting Details</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -167,11 +167,12 @@ export function SchedulePage() {
                   />
                 </div>
 
+                {/* FIXME: Haven't tested this section, will likely need some color changes */}
                 {selectedDate && selectedTime && meetingType && (
                   <Card className="p-4 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
                     <div className="text-sm">
                       <div className="mb-2">
-                        <strong className="dark:text-white">Selected Schedule:</strong>
+                        <strong className="dark:text-primary-foreground">Selected Schedule:</strong>
                       </div>
                       <div className="space-y-1 text-gray-700 dark:text-gray-300">
                         <div className="flex items-center gap-2">
@@ -206,10 +207,10 @@ export function SchedulePage() {
               </form>
             </Card>
 
-            <Card className="p-4 mt-4 bg-white dark:bg-gray-800/50 dark:border-gray-700">
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+            <Card className="p-4 mt-4 bg-card dark:border-gray-700">
+              <div className="text-sm text-muted-foreground">
                 <div className="mb-2">
-                  <strong className="dark:text-white">Meeting Information:</strong>
+                  <strong className="text-foreground">Meeting Information:</strong>
                 </div>
                 <ul className="space-y-1 list-disc list-inside">
                   <li>All meetings are conducted via Google Meet or Zoom</li>

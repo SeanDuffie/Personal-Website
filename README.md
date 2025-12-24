@@ -262,3 +262,11 @@ For this Project I'm going with TypeScript React, Vite, and Vercel for my tech s
         - lucide-react.js: 959 kB
         - react-day-picker.js: 898 kB
         - @radix-ui_react-select: 174 kB
+
+### References
+
+- https://dev.to/monica_w/what-tech-stack-should-i-use-to-build-my-portfolio-1jpf
+- https://medium.com/@zulfikarditya/building-a-modern-developer-portfolio-a-technical-deep-dive-a95d068b99fd
+- https://www.figma.com/resource-library/static-vs-dynamic-website/
+- https://www.crazyegg.com/blog/hero-image/
+- https://medium.com/@techworldthink/the-14-kb-rule-optimizing-the-critical-rendering-path-for-faster-websites-cd6d9e93b186

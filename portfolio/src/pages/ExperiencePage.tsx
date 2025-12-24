@@ -103,8 +103,8 @@ export function ExperiencePage() {
     <div className="min-h-screen py-24 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 dark:text-white">Experience & Education</h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <h1 className="mb-4 text-foreground">Experience & Education</h1>
+          <p className="text-muted-foreground">
             My professional journey and academic background
           </p>
         </div>
@@ -118,7 +118,7 @@ export function ExperiencePage() {
 
           <TabsContent value="experience" className="space-y-6">
             {experiences.map((exp, index) => (
-              <Card key={exp.id} className="p-6 dark:bg-gray-800 dark:border-gray-700">
+              <Card key={exp.id} className="p-6 bg-secondary dark:border-gray-700">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
@@ -129,8 +129,8 @@ export function ExperiencePage() {
                   <div className="flex-1">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                       <div>
-                        <h3 className="mb-1 dark:text-white">{exp.title}</h3>
-                        <div className="text-gray-600 dark:text-gray-400">{exp.company} • {exp.location}</div>
+                        <h3 className="mb-1 text-foreground">{exp.title}</h3>
+                        <div className="text-muted-foreground">{exp.company} • {exp.location}</div>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                         <Calendar className="w-4 h-4" />
@@ -138,11 +138,11 @@ export function ExperiencePage() {
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 dark:text-gray-400 mb-4">{exp.description}</p>
+                    <p className="text-muted-foreground mb-4">{exp.description}</p>
                     
                     <div className="mb-4">
                       <div className="text-sm mb-2 dark:text-gray-300">Key Achievements:</div>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         {exp.achievements.map((achievement, i) => (
                           <li key={i}>{achievement}</li>
                         ))}
@@ -164,7 +164,7 @@ export function ExperiencePage() {
 
           <TabsContent value="education" className="space-y-6">
             {education.map((edu) => (
-              <Card key={edu.id} className="p-6 dark:bg-gray-800 dark:border-gray-700">
+              <Card key={edu.id} className="p-6 bg-secondary dark:border-gray-700">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
@@ -175,8 +175,8 @@ export function ExperiencePage() {
                   <div className="flex-1">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                       <div>
-                        <h3 className="mb-1 dark:text-white">{edu.degree}</h3>
-                        <div className="text-gray-600 dark:text-gray-400">{edu.institution} • {edu.location}</div>
+                        <h3 className="mb-1 text-foreground">{edu.degree}</h3>
+                        <div className="text-muted-foreground">{edu.institution} • {edu.location}</div>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                         <Calendar className="w-4 h-4" />
@@ -190,7 +190,7 @@ export function ExperiencePage() {
                     
                     <div>
                       <div className="text-sm mb-2 dark:text-gray-300">Highlights:</div>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         {edu.highlights.map((highlight, i) => (
                           <li key={i}>{highlight}</li>
                         ))}
@@ -204,7 +204,7 @@ export function ExperiencePage() {
 
           <TabsContent value="certifications" className="space-y-6">
             {certifications.map((cert) => (
-              <Card key={cert.id} className="p-6 dark:bg-gray-800 dark:border-gray-700">
+              <Card key={cert.id} className="p-6 bg-secondary dark:border-gray-700">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
@@ -215,8 +215,8 @@ export function ExperiencePage() {
                   <div className="flex-1">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                       <div>
-                        <h3 className="mb-1 dark:text-white">{cert.name}</h3>
-                        <div className="text-gray-600 dark:text-gray-400">{cert.issuer}</div>
+                        <h3 className="mb-1 text-foreground">{cert.name}</h3>
+                        <div className="text-muted-foreground">{cert.issuer}</div>
                       </div>
                       <div className="text-sm text-gray-500 dark:text-gray-400">{cert.date}</div>
                     </div>

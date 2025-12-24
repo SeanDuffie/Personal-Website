@@ -131,8 +131,8 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
     <div className="min-h-screen py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 dark:text-white">Projects</h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <h1 className="mb-4 text-foreground">Projects</h1>
+          <p className="text-muted-foreground">
             A collection of my work spanning web applications, mobile apps, and open-source contributions
           </p>
         </div>
@@ -141,7 +141,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
         <div className="mb-8">
           <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <Input
                 type="text"
                 placeholder="Search projects..."
@@ -153,7 +153,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
           </div>
           
           <div className="flex items-center gap-2 overflow-x-auto pb-2">
-            <Filter className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+            <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0" />
             {categories.map((category) => (
               <Button
                 key={category}
@@ -173,7 +173,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
           {filteredProjects.map((project) => (
             <Card 
               key={project.id} 
-              className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer dark:bg-gray-800 dark:border-gray-700"
+              className="overflow-hidden hover:shadow-xl transition-shadow cursor-pointer bg-card dark:border-gray-700"
               onClick={() => onProjectClick(project.id)}
             >
               <div className="aspect-video bg-gray-200 dark:bg-gray-700 overflow-hidden">
@@ -186,11 +186,11 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
               
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="flex-1 dark:text-white">{project.title}</h3>
-                  <span className="text-xs text-gray-500 dark:text-gray-400 ml-2">{project.year}</span>
+                  <h3 className="flex-1 text-foreground">{project.title}</h3>
+                  <span className="text-xs text-muted-foreground ml-2">{project.year}</span>
                 </div>
                 
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                   {project.description}
                 </p>
                 
