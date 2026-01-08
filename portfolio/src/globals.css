@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* LIGHT MODE */
+    /* Background: Very subtle warm white to match the earthy tone */
+    --background: 0 20% 99%; 
+    /* Foreground: Deep, almost black version of your primary */
+    --foreground: 0 20% 15%;
+
+    /* Card: White stands out cleanly against the warm background */
+    --card: 0 0% 100%;
+    --card-foreground: 0 20% 15%;
+
+    /* Popover: Matches Card */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 20% 15%;
+
+    /* Primary: Your brand color #604040 (HSL: 0, 20%, 31%) */
+    --primary: 0 20% 31%;
+    --primary-foreground: 0 20% 98%; /* White text on buttons */
+
+    /* Secondary: A very light wash of your primary for subtle buttons */
+    --secondary: 0 20% 94%;
+    --secondary-foreground: 0 20% 31%;
+
+    /* Muted: Grayish-red for disabled states or subtle text */
+    --muted: 0 20% 94%;
+    --muted-foreground: 0 10% 45%;
+
+    /* Accent: Used for hover states on dropdowns/lists */
+    --accent: 0 20% 94%;
+    --accent-foreground: 0 20% 31%;
+
+    /* Destructive: Standard Red, slightly desaturated to match theme */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border: Subtle warm gray */
+    --border: 0 10% 88%;
+    --input: 0 10% 88%;
+    --ring: 0 20% 31%; /* Focus ring matches primary */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* DARK MODE */
+    /* Background: Very dark, warm brown-black (#1C1616) */
+    --background: 0 12% 10%;
+    /* Foreground: Soft off-white (#EEE5E5) */
+    --foreground: 0 15% 92%;
+
+    /* Card: Slightly lighter than background to create depth (#261E1E) */
+    --card: 0 12% 13%;
+    --card-foreground: 0 15% 92%;
+
+    --popover: 0 12% 13%;
+    --popover-foreground: 0 15% 92%;
+
+    /* Primary: Lightened to Rosy Taupe (#A88888) for visibility on dark */
+    --primary: 0 15% 60%; 
+    --primary-foreground: 0 12% 10%; /* Dark text on the light button */
+
+    /* Secondary: Darker mute (#382B2B) */
+    --secondary: 0 12% 20%;
+    --secondary-foreground: 0 15% 92%;
+
+    --muted: 0 12% 20%;
+    --muted-foreground: 0 10% 65%;
+
+    --accent: 0 12% 20%;
+    --accent-foreground: 0 15% 92%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 15% 92%;
+
+    --border: 0 12% 20%;
+    --input: 0 12% 20%;
+    --ring: 0 15% 60%;
+  }
+}
