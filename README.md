@@ -172,6 +172,13 @@ For this Project I'm going with TypeScript React, Vite, and Vercel for my tech s
         }
     }
     ```
+    - Light
+    - Dark
+    - A&M
+    - GT
+    - Christmas
+    - Halloween
+    - 4th of July
 
 6. Point to the `src/globals.css` file in the `src/main.tsx` file (this applies globally to the project).
     ``` typescript
@@ -232,6 +239,40 @@ For this Project I'm going with TypeScript React, Vite, and Vercel for my tech s
 `npm install`
 3. npm run dev
 
+
+### Priority
+
+1. First 14 KB
+    - HTML structure - Enough markup to display the initial viewport
+        - Measure size with `curl -s -o /dev/null -w "%{size_download}\n" https://example.com
+    - Critical CSS - Inlined styles for above the fold elements
+    - Minimal JS - Only what's essential for initial rendering
+    - Preload hints - For important fonts or resources
+
+## Packaging
+
+To make the site run efficiently, you must make some modifications to the deployed product.
+
+1. Aggressive Compression - make the deliverable files as small as possible by compressing.
+    - Gzip: The standard compression method. Older, but effective.
+    - Brotli: A newer algorithm developed by Google that is often 15-20% better for text based assets.
+2. Minification - strip away all unnecessary characters before serving.
+    - Remove whitespace, newlines, and comments.
+    - Shorten variable names.
+    - Tools: Terser (JS), cssnano (css), HTMLMinifier.
+3. Critical CSS (inlining) - only send the stuff that will be immediately visible.
+    - Extract only what is required to render the "Above the Fold" content.
+    - Embed this content inline into the <head> of the HTML.
+    - Load the rest of the CSS asynchronously (lazy load).
+4. Critical JS (defer or async) - Only send scripts that are needed for the initial screen. (only external scripts with src attribute).
+    - Use defer for Scripts that should happen after HTML parsing is complete but before DOMContentLoaded.
+    - Use async for Scripts that should occur in parallel with the HTML parsing/rendering.
+5. Tree Shaking - Remove dead weight (unused code/functions/libraries).
+    - Modern JavaScript bundlers (Webpack, Rollup, Vite) can detect "dead code".
+    - Ensure Tree shaking is enabled in the build process.
+6. Split HTML/Server-Side Rendering (SSR).
+    - For Single Page Applications (SPAs) use SSR to render the initial view on the server so the client gets meaningful HTML immediately, rather than an empty <div> waiting for JavaScript to load.
+7. Utilize a Content Delivery Network (CDN) to reduce Round-Trip-Time (RTT)
 
 ## NOTES
 

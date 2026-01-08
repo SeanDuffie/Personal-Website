@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowLeft, ExternalLink, Github, Calendar, CheckCircle, Circle } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
@@ -35,6 +35,7 @@ interface ProjectData {
 
 export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps) {
   // This would normally fetch project data based on projectId
+  /** FIXME: Replace this with a consolidated database. */
   const projectsData: Record<number, ProjectData> = {
     1: {
       id: 1,
@@ -238,14 +239,15 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
     },
   };
 
+  /** This is used to select the project from the database */
   const project = projectsData[projectId] || projectsData[1];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Back Button */}
-      <div className="bg-white border-b">
+      <div className="bg-background/80 backdrop-blur-md border-b transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <Button variant="ghost" onClick={onBack} className="gap-2">
+          <Button variant="ghost" onClick={onBack} className="gap-2 text-foreground">
             <ArrowLeft className="w-4 h-4" />
             Back to Projects
           </Button>
@@ -273,9 +275,9 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
         {/* Overview & Links */}
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2">
-            <Card className="p-6">
+            <Card className="p-6 bg-secondary dark:border-gray-600">
               <h2 className="mb-4">Project Overview</h2>
-              <p className="text-gray-600 mb-6">{project.description}</p>
+              <p className="text-muted-foreground mb-6">{project.description}</p>
               
               <div className="flex flex-wrap gap-3">
                 {project.externalLink && (
@@ -297,11 +299,11 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
           </div>
 
           <div>
-            <Card className="p-6">
+            <Card className="p-6 bg-secondary dark:border-gray-600">
               <h3 className="mb-4">Team</h3>
               <div className="space-y-2">
                 {project.team.map((member, index) => (
-                  <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                  <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <div className="w-2 h-2 bg-blue-600 rounded-full" />
                     {member}
                   </div>
@@ -312,7 +314,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
         </div>
 
         {/* Video Demo */}
-        <Card className="p-6 mb-12">
+        <Card className="p-6 mb-12 bg-secondary dark:border-gray-600">
           <h2 className="mb-4">Demo Video</h2>
           <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden">
             <iframe
@@ -329,7 +331,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
         </Card>
 
         {/* Technologies */}
-        <Card className="p-6 mb-12">
+        <Card className="p-6 mb-12 bg-secondary dark:border-gray-600">
           <h2 className="mb-6">Technologies & Tools</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {project.technologies.map((tech, index) => (
@@ -348,7 +350,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
         </Card>
 
         {/* Timeline */}
-        <Card className="p-6 mb-12">
+        <Card className="p-6 mb-12 bg-secondary dark:border-gray-600">
           <h2 className="mb-6">Project Timeline</h2>
           <div className="space-y-6">
             {project.timeline.map((item, index) => (
@@ -374,7 +376,7 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
                     <Calendar className="w-4 h-4" />
                     {item.date}
                   </div>
-                  <p className="text-gray-600">{item.description}</p>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -383,11 +385,11 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
 
         {/* Challenges & Outcomes */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="p-6">
+          <Card className="p-6 bg-secondary dark:border-gray-600">
             <h2 className="mb-4">Key Challenges</h2>
             <ul className="space-y-3">
               {project.challenges.map((challenge, index) => (
-                <li key={index} className="flex gap-3 text-gray-600">
+                <li key={index} className="flex gap-3 text-muted-foreground">
                   <span className="text-red-500 mt-1">•</span>
                   <span>{challenge}</span>
                 </li>
@@ -395,11 +397,11 @@ export function ProjectDetailPage({ projectId, onBack }: ProjectDetailPageProps)
             </ul>
           </Card>
 
-          <Card className="p-6">
+          <Card className="p-6 bg-secondary dark:border-gray-600">
             <h2 className="mb-4">Outcomes & Impact</h2>
             <ul className="space-y-3">
               {project.outcomes.map((outcome, index) => (
-                <li key={index} className="flex gap-3 text-gray-600">
+                <li key={index} className="flex gap-3 text-muted-foreground">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span>{outcome}</span>
                 </li>

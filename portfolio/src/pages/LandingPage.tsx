@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
@@ -9,7 +9,7 @@ interface LandingPageProps {
 
 export function LandingPage({ onNavigate }: LandingPageProps) {
 
-  /** TODO: Enter my actual projects here */
+  /** FIXME: Move this to a consolidated projects file. */
   const featuredProjects = [
     {
       id: 1,
@@ -54,10 +54,9 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
                 // 'sticky' keeps it pinned. 'top-0' sets the pin position.
                 // className="sticky top-0 w-full h-screen object-cover -z-10"
                 className="
-                    fixed top-0 left-0
-                    h-fit w-fit
-                    object-contain
-                    -z-10
+                    fixed
+                    h-[90vh] w-full
+                    object-cover
                 "
             /> */}
 
@@ -66,12 +65,12 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
            {/* bg-gradient-to-b from-black/60 via-black/40 to-white" /> */}
         </div>
         
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
             {/* FIXME: Make the text much bigger, constant white, animate? */}
-          <h1 className="text-xl text-foreground mb-4">
+          <h1 className="text-6xl text-white mb-4 font-serif">
             Howdy, I'm Sean Duffie!
           </h1>
-          <p className="text-xl text-foreground/90 mb-8">
+          <p className="text-2xl text-shadow-lg/90 text-white/90 mb-8 font-serif">
             {/* FIXME: Make the text much bigger, constant white, animate? */}
             I'm an Embedded Software Engineer with a passion for optimization and innovation.<br/>
             Let's build something amazing together.

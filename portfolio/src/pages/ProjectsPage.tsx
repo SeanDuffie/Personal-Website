@@ -15,6 +15,7 @@ export function ProjectsPage({ onProjectClick }: ProjectsPageProps) {
 
   const categories = ['all', 'web-app', 'mobile', 'open-source', 'personal'];
 
+  /** FIXME: Move this to a consolidated project page */
   const projects = [
     {
       id: 1,
